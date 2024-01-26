@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag and Drop Interface</title>
+  <style>
+    body {
+      display: flex;
+      font-family: Arial, sans-serif;
+    }
+
+    #left-panel {
+      flex: 1;
+      background-color: #f0f0f0;
+    }
+
+    #result-panel {
+      flex: 1;
+      background-color: #e0e0e0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+    }
+
+    .adjective-cell {
+      min-height: 50px;
+    }
+
+    #left-panel div,
+    .adjective-cell div {
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      cursor: move;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="left-panel">
+    <div id="a1" draggable="true" class="adjective" ondragstart="onDragStart(event)">Adjective 1</div>
+    <div id="a2" draggable="true" class="adjective" ondragstart="onDragStart(event)">Adjective 2</div>
+    <div id="a3" draggable="true" class="adjective" ondragstart="onDragStart(event)">Adjective 3</div>
+    <!-- Add more adjectives as needed -->
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Numbers</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+
+      </tr>
+      <tr>
+        <td>2</td>
+        
+      </tr>
+      <tr>
+        <td>3</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div id="result-panel" ondragover="allowDrop(event)">
+    <table>
+      <thead>
+        <tr>
+
+          <th>Adjectives</th>
+        </tr>
+      </thead>
+      <tbody id="result-table-body">
+        <tr>
+          <td class="adjective-cell" id="adjective1" ondrop="dropAdjective(event, 1)" ondragover="allowDrop(event)">
+          <div id = "null1" class = "draggable">&nbsp;</div>
+          </td>
+        </tr>
+        <tr>
+
+          <td class="adjective-cell" id="adjective2" ondrop="dropAdjective(event, 2)" ondragover="allowDrop(event)">
+          <div id = "null2" class = "draggable">&nbsp;</div> 
+          </td>
+        </tr>
+        <tr>
+
+          <td class="adjective-cell" id="adjective3" ondrop="dropAdjective(event, 3)" ondragover="allowDrop(event)">
+          <div id = "null3" class = "draggable">&nbsp;</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <script>
+    
+    function onDragStart(event) {
+      const draggedElement = event.target;
+      event.dataTransfer.setData('text/plain', draggedElement.id);
+      console.log("ondragstart")
+    }
+
+    function allowDrop(event) {
+      event.preventDefault();
+      console.log("allowdrop")
+    }
+
+    function dropAdjective(event, number) { //number = 2
+      event.preventDefault();
+      console.log("dropadj")
+      const adjectiveText = event.dataTransfer.getData("text/plain"); //null1
+      const adjectiveElement = document.getElementById(adjectiveText); //a1 wala div left side pe
+      //null1 wala div
+
+      const adjectiveCell = document.getElementById("adjective" + number); //jis row pe drop kar rahe hain voh row - 2nd
+      const cellDiv = adjectiveCell.querySelector("div"); //uss row ke andar wala div
+ 
+      cellDiv.id = adjectiveText;
+      cellDiv.draggable = true;
+
+      adjectiveCell.ondrop = function(){console.log("fml")};
+      adjectiveElement.parentNode.removeChild(adjectiveElement); //left hand side se usko remove karna 
+      cellDiv.textContent = adjectiveText; //div ke andar ka text change kar diya 
+      // makeSortable();
+    }
+
+
+  </script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+$( function() {
+  $( "#result-table-body" ).sortable();
+} );
+</script>
+</body>
+
+</html>
