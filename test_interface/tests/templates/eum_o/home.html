@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/style.css" />
+        <!-- <script type = text/javascript src="../static/script.js" defer></script> -->
+        <title>EUM-O Home</title>
+      </head>
+
+    <body>
+        <div class="header">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" class = "logo"/>  
+        </div>
+        <div class="instructions">
+            <h2>Instructions for taking the EUM-O (EUM Organization)</h2>
+            <div class="instruct">
+                <p>You have to rank a set of 20 adjectives three times: once to describe how you see your organisation today, then 
+                    to describe how you would like to see your organisation ideally, and finally to describe how you see most 
+                    other organisations around you. You can do the ranking within each of the three columns by dragging the adjectives 
+                    from the list on the left to the numbered rows on the right, and can rearrange the order if required by moving 
+                    the adjectives up and down in the table on the right.</p> 
+                <p> 1. For the column titled “<b>ORGANISATION AS-IS</b>”, drag the adjectives from the left column and place them in 
+                    the right column <b>in the order that you believe they apply to your organisation currently</b> Rank 1 best describes 
+                    how you see the organisation today, while rank 20 applies to your organisation the least.</p>
+                <p>2. For the column titled “<b>ORGANISATION WISHED FOR</b>”, drag the adjectives from the left column and place them 
+                    in the right column <b>in the order that you would *like* them to apply to your organisation.</b> Rank 1 describes 
+                    what you would most like to see in your ideal organisation, while rank 20 shows what you would like to 
+                    see the least.</p>
+                <p>3. In the column titled “<b>MOST OTHER ORGANIZATIONS</b>”, drag the adjectives from the left column and place 
+                    them in the right column to describe <b>how you see most other organisations</b>. Rank 1 describes the top feature 
+                    you see in most other organisations, while rank 20 indicates what you see in them the least. [While all other 
+                    organisations are of course not the same, we do typically hold some generalisations about how other organisations 
+                    are – we invite you use that perspective to rank the adjectives on this screen.] </p>
+                <p>4. At any time in this ranking process, you can use the left and right arrowheads next the ranking columns to 
+                    move back and forth between the three lists described above.</p>
+                <p>Once you have completed ranking all the 20 adjectives in each of the three lists, please click on the “SUBMIT” 
+                    button. This will bring up a window that will show you your rankings across the three lists. If you don’t wish 
+                    to make any changes, please click on the “Confirm Submit” button. </p>
+                <p>If you feel you want to change any of the rankings, click “Cancel” at the bottom of the screen, which will take 
+                    you back to the ranking screens. You can then click on “Submit” again, review your rankings, and then 
+                    click “Confirm Submit”.</p>
+
+            </div>
+
+        </div>
+        <!-- <h1>Available Tests: EUM - I (EUM Individual)</h1> -->
+        <div class="submit">
+            <a href="{% url 'o_SC_ranking' %}">Take Test</a>
+        </div>
+
+    </body>
+
+
+
+</html>
+

@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(219, 194, 228);
+  }
+
+  .home{
+    position: absolute;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+  }
+
+  .header{
+    min-height: 10vh;
+    background-color:  rgb(155, 108, 170);
+    display: flex;
+    align-items: center;
+  }
+
+  .logo{
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+  }
+
+  .instructions {
+    width: 75%;
+    display: flex;
+    /* flex: 1; */
+    flex-direction: column;
+    font-family: Arial, sans-serif; 
+    background-color:  rgb(155, 108, 170);
+    border: 1px solid black;  
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .confirm {
+    display: flex;
+    grid-row: auto;
+  }
+
+  .adjectives-bar {
+    display: flex;
+  }
+
+  .left-panel {
+    display: flex;
+  }
+  .submit {
+    position: relative;
+    width: 75px;
+    display: flex;
+    /* flex: 1; */
+    /* flex-direction: column; */
+    font-family: Arial, sans-serif; 
+    background-color:  rgb(155, 108, 170);
+    color: black;
+    /* background-color:  rgb(155, 108, 170); */
+    border: 1px solid black;  
+    padding: 20px;
+    /* margin: 20px; */
+    left: 69vw;
+  }
+
+  .thanks {
+    width: 500px;
+    display: flex;
+    /* flex: 1; */
+    /* flex-direction: column; */
+    font-family: Arial, sans-serif; 
+    /* background-color:  rgb(155, 108, 170); */
+    color: black;
+    /* background-color:  rgb(155, 108, 170); */
+    /* border: 1px solid black;   */
+    padding: 20px;
+    /* margin: 200px; */
+    margin-top: 250px;
+    margin-left: 350px;
+  }
+
+  
+  .container {
+    background-color: pink;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .draggable {
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    cursor: move;
+  }
+  
+  .draggable.dragging {
+    opacity: .5;
+  }
+  
+  .submit-button {
+    position: relative;
+    width: 75px;
+    display: flex;
+    /* flex: 1; */
+    /* flex-direction: column; */
+    font-family: Arial, sans-serif; 
+    background-color:  rgb(155, 108, 170);
+    color: black;
+    /* background-color:  rgb(155, 108, 170); */
+    border: 1px solid black;  
+    padding: 20px;
+    /* margin: 20px; */
+    left: 69vw;
+  }

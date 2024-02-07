@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../static/final_style.css" />
+  <script type = text/javascript src="../../static/eum_i/sc_script.js" defer></script>
+  <title>Drag and Drop Interface</title>
+</head>
+
+<body class = "ranking-page">
+
+  <div class="header">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" class = "logo"/>  
+</div>
+  <div class="content">
+  <div class="table">
+    <div class="instructions">
+      <h2>Instructions for taking the EUM-I</h2>
+      <div class="instruct">
+        <p>For the column titled “<b>I AM…</b>”, drag the adjectives from the left column and place them in the right
+          column <b>in the order that you believe they apply to you currently</b>. Rank 1 describes you the best,
+          and rank 15 applies to you the least.</p>
+  
+      </div>
+  
+    </div>
+  
+    <div id="left-panel">
+      <h3>  </h3>
+      <div class="adjective" draggable="true" id = "Rational" ondragstart="onDragStart(event)">Rational </div>
+      <div class="adjective" draggable="true" id = "Sacrificing" ondragstart="onDragStart(event)">Sacrificing</div>
+      <div class="adjective" draggable="true" id = "Gracious" ondragstart="onDragStart(event)">Gracious</div>
+      <div class="adjective" draggable="true" id = "Cautious" ondragstart="onDragStart(event)">Cautious</div>
+      <div class="adjective" draggable="true" id = "Emotional" ondragstart="onDragStart(event)">Emotional</div>
+      <div class="adjective" draggable="true" id = "Competitive" ondragstart="onDragStart(event)">Competitive</div>
+      <div class="adjective" draggable="true" id = "Sympathetic" ondragstart="onDragStart(event)">Sympathetic</div>
+      <div class="adjective" draggable="true" id = "Uninhibited" ondragstart="onDragStart(event)">Uninhibited</div>
+      <div class="adjective" draggable="true" id = "Collaborative" ondragstart="onDragStart(event)">Collaborative</div>
+      <div class="adjective" draggable="true" id = "Dutiful" ondragstart="onDragStart(event)">Dutiful</div>
+      <div class="adjective" draggable="true" id = "Fair" ondragstart="onDragStart(event)">Fair</div>
+      <div class="adjective" draggable="true" id = "Tactful" ondragstart="onDragStart(event)">Tactful</div>
+      <div class="adjective" draggable="true" id = "Tough" ondragstart="onDragStart(event)">Tough</div>
+      <div class="adjective" draggable="true" id = "Dynamic" ondragstart="onDragStart(event)">Dynamic</div>
+      <div class="adjective" draggable="true" id = "Steady" ondragstart="onDragStart(event)">Steady</div>
+      <!-- Add more adjectives as needed -->
+    </div>
+  
+    <table style="width:1%">
+      <thead>
+        <tr>
+          <th>S.No.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+  
+        </tr>
+        <tr>
+          <td>2</td>
+          
+        </tr>
+        <tr>
+          <td>3</td>
+        </tr>
+  
+        <tr>
+          <td>4</td>
+        </tr>
+  
+        <tr>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>6</td>
+  
+        </tr>
+        <tr>
+          <td>7</td>
+          
+        </tr>
+        <tr>
+          <td>8</td>
+        </tr>
+  
+        <tr>
+          <td>9</td>
+        </tr>
+  
+        <tr>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>11</td>
+  
+        </tr>
+        <tr>
+          <td>12</td>
+          
+        </tr>
+        <tr>
+          <td>13</td>
+        </tr>
+  
+        <tr>
+          <td>14</td>
+        </tr>
+  
+        <tr>
+          <td>15</td>
+        </tr>
+  
+      </tbody>
+    </table>
+  
+    <div id="result-panel" ondragover="allowDrop(event)">
+      <table>
+        <thead>
+          <tr>
+  
+            <th>I AM...</th>
+          </tr>
+        </thead>
+        <tbody id="result-table-body">
+          <tr>
+            <td class="adjective-cell" id="adjective1" ondrop="dropAdjective(event, 1)" ondragover="allowDrop(event)">
+            <div id = "null1" class = "draggable">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+  
+            <td class="adjective-cell" id="adjective2" ondrop="dropAdjective(event, 2)" ondragover="allowDrop(event)">
+            <div id = "null2" class = "draggable">&nbsp;</div> 
+            </td>
+          </tr>
+          <tr>
+  
+            <td class="adjective-cell" id="adjective3" ondrop="dropAdjective(event, 3)" ondragover="allowDrop(event)">
+            <div id = "null3" class = "draggable">&nbsp;</div>
+            </td>
+          </tr>
+          <tr >
+  
+            <td class="adjective-cell" id="adjective4" ondrop="dropAdjective(event, 4)" ondragover="allowDrop(event)">
+            <div id = "null3" class = "draggable">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+  
+            <td class="adjective-cell" id="adjective5" ondrop="dropAdjective(event, 5)" ondragover="allowDrop(event)">
+            <div id = "null3" class = "draggable">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+            <td class="adjective-cell" id="adjective6" ondrop="dropAdjective(event, 6)" ondragover="allowDrop(event)">
+            <div id = "null1" class = "draggable">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+  
+            <td class="adjective-cell" id="adjective7" ondrop="dropAdjective(event, 7)" ondragover="allowDrop(event)">
+            <div id = "null1" class = "draggable">&nbsp;</div> 
+            </td>
+          </tr>
+          <tr>
+  
+            <td class="adjective-cell" id="adjective8" ondrop="dropAdjective(event, 8)" ondragover="allowDrop(event)">
+            <div id = "null3" class = "draggable">&nbsp;</div>
+            </td>
+          </tr>
+          <tr >
+  
+            <td class="adjective-cell" id="adjective9" ondrop="dropAdjective(event, 9)" ondragover="allowDrop(event)">
+            <div id = "null2" class = "draggable">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+  
+            <td class="adjective-cell" id="adjective10" ondrop="dropAdjective(event, 10)" ondragover="allowDrop(event)">
+            <div id = "null3" class = "draggable">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+            <td class="adjective-cell" id="adjective11" ondrop="dropAdjective(event, 11)" ondragover="allowDrop(event)">
+            <div id = "null3" class = "draggable">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+  
+            <td class="adjective-cell" id="adjective12" ondrop="dropAdjective(event, 12)" ondragover="allowDrop(event)">
+            <div id = "null3" class = "draggable">&nbsp;</div> 
+            </td>
+          </tr>
+          <tr>
+  
+            <td class="adjective-cell" id="adjective13" ondrop="dropAdjective(event, 13)" ondragover="allowDrop(event)">
+            <div id = "null3" class = "draggable">&nbsp;</div>
+            </td>
+          </tr>
+          <tr >
+  
+            <td class="adjective-cell" id="adjective14" ondrop="dropAdjective(event, 14)" ondragover="allowDrop(event)">
+            <div id = "null1" class = "draggable">&nbsp;</div>
+            </td>
+          </tr>
+          <tr>
+  
+            <td class="adjective-cell" id="adjective15" ondrop="dropAdjective(event, 15)" ondragover="allowDrop(event)">
+            <div id = "null1" class = "draggable">&nbsp;</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+  </div>
+  
+    <form id="i-sc-ordering-form" method="post" action="{% url 'i_save_sc_ordering' %}">
+    {% csrf_token %}
+    <input type="hidden" id="i-sc-ordering-input" name="ordering">
+    </form>
+  <div class="submit-button">
+  <button id="i-save-sc-ordering">Next</button>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+$( function() {
+  $( "#result-table-body" ).sortable({
+    stop: saveInterOrdering
+  });
+} );
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/style.css" />
+        <!-- <script type = text/javascript src="../static/script.js" defer></script> -->
+        <title>EUM-I Home</title>
+      </head>
+
+    <body class = "home">
+        <div class="header">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" class = "logo"/>  
+        </div>
+        <div class="instructions">
+            <h2>Instructions for taking the EUM-I</h2>
+            <div class="instruct">
+                <p>You have to rank a set of 15 adjectives three times: once to describe <b>how you see yourself today</b>, then to
+                    describe <b>how you would like to see yourself ideally</b>, and finally to describe <b>how you see most other
+                    people</b> in the world around you. You can do the ranking within each of the three columns by dragging the
+                    adjectives from the list on the left to the numbered rows on the right, and can rearrange the order if
+                    required by moving the adjectives up and down in the table on the right.</p>
+                    <p> 1. For the column titled “<b>I AM…</b>”, drag the adjectives from the left column and place them in the right
+                    column <b>in the order that you believe they apply to you currently</b>. Rank 1 describes you the best,
+                    and rank 15 applies to you the least.</p>
+                    <p>2. For the column titled “<b>I WOULD LIKE TO BE…</b>”, drag the adjectives from the left column and place
+                    them in the right column <b>in the order that you would like them to apply to you</b> – in other words,
+                    how you would ideally want to be. Rank 1 is what you most want to see in yourself, while rank 15 is
+                    what you would least want to see in yourself.</p>
+                    <p>3. For the column titled “<b>OTHER PEOPLE ARE…</b>”, drag the adjectives from the left column and place
+                    them in the right column to reflect <b>how you see most other people</b>. Rank 1 describes your view of
+                    other people the best, like rank 15 describes what you see the least in other people. [While all
+                    other people are of course not the same, we do typically hold some views on how the world is – we
+                    invite you use that perspective to rank the adjectives on this screen.]</p>
+                    <p>Once you have completed ranking all the 15 adjectives in each of the three lists, please click on the
+                    “SUBMIT” button. This will bring up a window that will show you your rankings across the three lists. If you
+                    don’t wish to make any changes, please click on the “Submit” button.</p>
+                    <p>If you feel you want to change any of the rankings, click “Cancel” at the bottom of the screen, which will
+                    take you back to the ranking screens. You can then click on “Submit” again, review your rankings, and then
+                    click “Confirm Submit”.</p>
+
+            </div>
+
+        </div>
+        <!-- <h1>Available Tests: EUM - I (EUM Individual)</h1> -->
+        <div class="submit">
+            <a href="{% url 'i_SC_ranking' %}">Take Test</a>
+        </div>
+
+    </body>
+
+
+
+</html>
